@@ -8,3 +8,8 @@ function using(name, values, func){
     jasmine.currentEnv_.currentSpec.description += ' (with "' + name + '" using ' + values[i].join(', ') + ')';
   }
 }
+
+// node require() based exports.
+if (typeof(exports) != 'undefined') {
+  exports.using = using;
+}
